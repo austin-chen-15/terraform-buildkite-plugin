@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+set -x
+RED='\033[0;31m'
+ORANGE='\033[0;33m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+# Downloading conftest to HOME so we get *some* caching/sharing
+CONFTEST_BIN="${HOME}/conftest-versions/conftest-${CONFTEST_VERSION}"
+if [[ ! -f $CONFTEST_BIN ]]; then
+  mkdir -p ${HOME}/conftest-versions
+  wget https://github.com/open-policy-agent/conftest/releases/download/v${CONFTEST_VERSION}/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
+  tar xzf conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
+  mv conftest $CONFTEST_BIN
+  chmod +x $CONFTEST_BIN
+  echo "downloaded conftest to $CONFTEST_BIN"
+fi
+
+$CONFTEST_BIN "$@"
