@@ -7,7 +7,7 @@ set -ueo pipefail
 
 export TERRAFORM_VERSION="${TERRAFORM_VERSION:-1.0.1}"
 export OPA_VERSION="${OPA_VERSION:-0.30.1}"
-export CONFTEST_VERSION="${CONFTEST_VERSION:-0.24.0}
+export CONFTEST_VERSION="${CONFTEST_VERSION:-0.24.0}"
 
 
 # Make everyhing in the `bin` dir available in $PATH
