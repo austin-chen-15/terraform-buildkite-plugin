@@ -12,7 +12,7 @@ if [[ ! -f $CONFTEST_BIN ]]; then
   mkdir -p ${HOME}/conftest-versions
   wget https://github.com/open-policy-agent/conftest/releases/download/v${CONFTEST_VERSION}/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
   tar xzf conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
-  mv conftest $CONFTEST_BIN
+  sudo mv conftest $CONFTEST_BIN
   chmod +x $CONFTEST_BIN
   echo "downloaded conftest to $CONFTEST_BIN"
 fi
