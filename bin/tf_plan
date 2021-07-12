@@ -25,6 +25,8 @@ else
   exit 1
 fi
 
+echo -e "########### UPLOAD ARTIFACT UPON SUCCESSFUL OPA CHECK ###########"
+
 tar -czf plan-artifacts.tar.gz $(git ls-files --others .)
 
 ls -al
