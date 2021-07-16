@@ -15,7 +15,6 @@ DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 export PATH="$DIR/../bin:$PATH"
 export TERRAFORM_PLUGIN_DIR=$DIR/..
 
-
 echo "___ : checking if the provided command is allowed.."
 
 if [[ "${BUILDKITE_COMMAND}" != "buildkite-agent pipeline upload" ]] | [[ "${BUILDKITE_COMMAND}" != "tf_version" ]] | [[ "${BUILDKITE_COMMAND}" != "opa_version" ]] | [[ "${BUILDKITE_COMMAND}" != "conftest_version" ]] | [[ "${BUILDKITE_COMMAND}" != "tf_plan" ]] | [[ "${BUILDKITE_COMMAND}" != "tf_apply" ]]; then
