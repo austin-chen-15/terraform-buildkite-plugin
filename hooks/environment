@@ -14,3 +14,5 @@ export CONFTEST_VERSION="${CONFTEST_VERSION:-0.24.0}"
 DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 export PATH="$DIR/../bin:$PATH"
 export TERRAFORM_PLUGIN_DIR=$DIR/..
+
+echo "hello"
