@@ -2,5 +2,5 @@
 
 set -e -o pipefail
 
-echo "getting terraform version"
+echo "getting terraform version.................."
 terraform version
