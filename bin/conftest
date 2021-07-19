@@ -13,6 +13,9 @@ if [[ ! -f $CONFTEST_BIN ]]; then
   wget https://github.com/open-policy-agent/conftest/releases/download/v${CONFTEST_VERSION}/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
   tar xzf conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
   mv conftest $CONFTEST_BIN-$CONFTEST_VERSION
+  ls -la $CONFTEST_BIN
+  ls -la $CONFTEST_BIN-CONFTEST_VERSION
+  chmod +x $CONFTEST_BIN-CONFTEST_VERSION
   chmod +x $CONFTEST_BIN
   echo "downloaded conftest to $CONFTEST_BIN"
 fi
