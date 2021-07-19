@@ -18,6 +18,8 @@ terraform show -json tfplan > tfplan.json
 pwd
 echo $TERRAFORM_PLUGIN_DIR
 
+conftest test tfplan.json
+
 echo -e "########### UPLOAD ARTIFACT UPON SUCCESSFUL OPA CHECK ###########"
 
 tar -czf plan-artifacts.tar.gz $(git ls-files --others .)
