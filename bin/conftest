@@ -9,22 +9,12 @@ NC='\033[0m'
 # Downloading conftest to HOME so we get *some* caching/sharing
 CONFTEST_BIN="${HOME}/conftest-versions/conftest-${CONFTEST_VERSION}"
 if [[ ! -f $CONFTEST_BIN ]]; then
-  echo "1"
   mkdir -p ${HOME}/conftest-versions
-  
-  echo "2"
   wget https://github.com/open-policy-agent/conftest/releases/download/v${CONFTEST_VERSION}/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
-  
-  echo "3"
   tar xzf conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
-  
-  echo "4"
   mv conftest $CONFTEST_BIN
-  
-  echo "5"
+
   ls -la $CONFTEST_BIN
-  
-  echo "6"  
   chmod -R 755 $CONFTEST_BIN
   
   echo "downloaded conftest to $CONFTEST_BIN"
