@@ -16,9 +16,10 @@ echo -e "#################### OPA POLICY CHECK ####################"
 
 terraform show -json tfplan > tfplan.json
 pwd
+ls -l ../
 echo $TERRAFORM_PLUGIN_DIR
 
-conftest test -p policy tfplan.json
+conftest test -p ../policy tfplan.json
 
 echo -e "########### UPLOAD ARTIFACT UPON SUCCESSFUL OPA CHECK ###########"
 
