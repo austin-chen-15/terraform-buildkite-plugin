@@ -16,7 +16,11 @@ echo -e "#################### OPA POLICY CHECK ####################"
 
 terraform show -json tfplan > tfplan.json
 pwd
+ls -l
 ls -l ../
+ls -l ../../
+ls -l ../../../
+ls -l ../../../../
 echo $TERRAFORM_PLUGIN_DIR
 
 conftest test -p ../policy tfplan.json
