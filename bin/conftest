@@ -19,18 +19,12 @@ if [[ ! -f $CONFTEST_BIN ]]; then
   tar xzf conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz
   
   echo "4"
-  mv conftest $CONFTEST_BIN-$CONFTEST_VERSION
+  mv conftest $CONFTEST_BIN
   
   echo "5"
   ls -la $CONFTEST_BIN
   
-  echo "6"
-  ls -la $CONFTEST_BIN-CONFTEST_VERSION
-  
-  echo "7"
-  chmod +x $CONFTEST_BIN-CONFTEST_VERSION
-  
-  echo "8"  
+  echo "6"  
   chmod +x $CONFTEST_BIN
   
   echo "downloaded conftest to $CONFTEST_BIN"
